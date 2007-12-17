@@ -8,7 +8,6 @@ License: GPL
 Group: Text tools
 Source:  ftp://ftp.math.utah.edu/pub/misc/ndiff-%{version}.tar.gz
 URL: http://www.math.utah.edu/~beebe/software/ndiff/
-BuildRoot: %_tmppath/%name-%version-root
 
 %description
 When a numerical program is run  in  multiple  environments  (operating

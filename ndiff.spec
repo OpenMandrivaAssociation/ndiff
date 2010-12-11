@@ -1,4 +1,4 @@
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary: Compare putatively similar files, ignoring small numeric differences 
 Name: ndiff

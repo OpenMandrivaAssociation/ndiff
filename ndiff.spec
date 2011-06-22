@@ -1,4 +1,4 @@
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: Compare putatively similar files, ignoring small numeric differences 
 Name: ndiff
@@ -33,12 +33,18 @@ mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man1
 %makeinstall
 mv $RPM_BUILD_ROOT/%{_mandir}/ndiff* $RPM_BUILD_ROOT/%{_mandir}/man1
 
+###workaround bug #52511
+rm -rf $RPM_BUILD_ROOT/%{_bindir}/ndiff
+mv $RPM_BUILD_ROOT/%{_datadir}/lib/%{name}/%{name}-%{version}/ndiff.awk $RPM_BUILD_ROOT/%{_datadir}/lib/%{name}/%{name}-%{version}/ndiff-2.00.awk
+mv  $RPM_BUILD_ROOT/%{_mandir}/man1/ndiff.1 $RPM_BUILD_ROOT/%{_mandir}/man1/ndiff-2.00.1
+###workaround bug #52511
+
 %files
 %defattr(-,root,root)
 %doc COPYING README* INSTALL 
-%{_bindir}/ndiff*
-%{_mandir}/man1/ndiff.1*
-%{_datadir}/lib/%{name}/%{name}-%{version}/ndiff.awk
+%{_bindir}/ndiff-2.00
+%{_mandir}/man1/ndiff-2.00.1*
+%{_datadir}/lib/%{name}/%{name}-%{version}/ndiff*
 
 %clean
 [ %buildroot != '/' ] && rm -fr %buildroot

@@ -7,7 +7,7 @@ Release: %release
 License: GPL
 Group: Text tools
 Source:  ftp://ftp.math.utah.edu/pub/misc/ndiff-%{version}.tar.gz
-URL: http://www.math.utah.edu/~beebe/software/ndiff/
+URL: https://www.math.utah.edu/~beebe/software/ndiff/
 BuildRoot: %_tmppath/%name-%version-root
 
 %description

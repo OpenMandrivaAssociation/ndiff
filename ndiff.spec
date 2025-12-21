@@ -10,6 +10,11 @@ Source:  ftp://ftp.math.utah.edu/pub/misc/ndiff-%{version}.tar.gz
 URL: https://www.math.utah.edu/~beebe/software/ndiff/
 BuildRoot: %_tmppath/%name-%version-root
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 When a numerical program is run  in  multiple  environments  (operating
 systems, architectures, or compilers), assessing its consistency can be
